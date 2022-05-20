@@ -18,8 +18,9 @@ class PostsController extends Controller
         
         ]);
 
+        auth()->user()->posts()->create($data);
 
-        return dd(request()-> all());
+        dd(request()->all());
     }
     
 }
