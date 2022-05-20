@@ -7,8 +7,9 @@
             <img src="/img/personal_user.jpg" alt="" class="rounded-circle w-100">
         </div>
         <div class="col-lg-9">
-            <div>
+            <div class="d-flex justify-content-between align-baseline">
                 <h1>{{ $user->username}}</h1>
+                <a href="/p/create">Add New Posts</a>
             </div>
             <div><a href="">Edit Profile</a></div>
             <div class="d-flex">
