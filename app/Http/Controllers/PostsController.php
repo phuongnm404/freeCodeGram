@@ -8,8 +8,10 @@ class PostsController extends Controller
 {
     //
     public function create() {
-        return view('posts');
+        return view('posts.create');
     }
-    
+    public function store() {
+        return dd(request()-> all());
+    }
     
 }
