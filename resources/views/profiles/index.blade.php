@@ -25,6 +25,16 @@
                 <div><strong> <a href="{{$user->profile->url}}">{{$user->profile->url}}</a> </strong></div>
             </div>
         </div>
+        <div class="row pt-5">
+            @foreach ($user->posts as $post)
+                <div class="col-4">
+                    <img src="/storage/{{ $post->image}}" alt="" class="w-100">
+                </div>
+            @endforeach
+
+
+           
+        </div>
         
     </div>
 </div>
