@@ -2,8 +2,9 @@
 
 @section('content')
 <div class="container">
-   
-   <form action="/profile/ {{$user->id}} " method="post" enctype="multipart/form-data">
+    
+    
+   <form action="/profile/{{$user->id}}"  enctype="multipart/form-data" method="POST">
         @csrf
         @method('PATCH')
 
@@ -44,6 +45,21 @@
                         @enderror
                     </div>
                 </div>
+
+                <div class="form-group row">
+                    <label for="image" class="col-form-label text-md-right">{{ __('Profile Image') }}</label>
+                    <div class="col-md-12">
+                        <input id="image" type="file" class=" @error('image') is-invalid @enderror" name="image" value="{{ old('image')  ?? $user->profile->image }}"  autocomplete="image" autofocus>
+                        @error('image')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
+                </div>
+
+
+
                 <div class="row pt-3">
                     <button class="btn btn-primary">Save Profile</button>
                 </div>

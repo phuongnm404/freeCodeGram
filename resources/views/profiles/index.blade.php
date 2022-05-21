@@ -4,14 +4,14 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-3 pr-5 p-3">
-            <img src="/img/personal_user.jpg" alt="" class="rounded-circle w-100">
+            <img src="/storage/{{$user->profile->image}}" alt="" class="rounded-circle w-100">
         </div>
         <div class="col-lg-9">
             <div class="d-flex justify-content-between align-baseline">
                 <h1>{{ $user->username}}</h1>
                 <a href="/p/create">Add New Posts</a>
             </div>
-            <div><a href="/profile/ {{$user->id}}/edit">Edit Profile</a></div>
+            <div><a href="/profile/{{ $user->id }}/edit">Edit Profile</a></div>
             <div class="d-flex">
                 <div class="pr-3"> <strong>{{$user->posts->count()}} </strong> posts </div>
                 <div class="pr-3"> <strong>67 </strong> followers </div>
