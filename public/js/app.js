@@ -1926,7 +1926,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     followUser: function followUser() {
-      axios.post('/follow/' + this.userId).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/follow/' + this.userId).then(function (response) {
         console.log(response.data);
       });
     }
