@@ -13,12 +13,11 @@ class CreatesProfileUserPivotTable extends Migration
      */
     public function up()
     {
-        Schema::create('profile-user', function (Blueprint $table) {
+        Schema::create('profile_user', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('profile_id');
             $table->unsignedBigInteger('user_id');
             $table->timestamps();
-
         });
     }
 
@@ -29,6 +28,6 @@ class CreatesProfileUserPivotTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('profile-user');
+        Schema::dropIfExists('profile_user');
     }
 }
