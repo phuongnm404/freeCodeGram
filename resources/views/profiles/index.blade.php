@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-lg-3 pr-5 p-3">
+        <div class="col-lg-3 col-md-3 pr-5 p-3">
             <img src="/storage/{{$user->profile->image}}" alt="" class="rounded-circle w-100">
         </div>
         <div class="col-lg-9">
