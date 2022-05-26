@@ -16,9 +16,9 @@ import Axios from 'axios'
         },
         methods: {
             followUser() {
-                Axios.post('/follow/' + this.userId)
+                axios.post('/follow/' + this.userId)
                 .then(response => {
-                    console.log(response.data); 
+                    console.log(response); 
                 });
             }
         }
