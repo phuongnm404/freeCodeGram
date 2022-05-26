@@ -3,14 +3,14 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-lg-3 pr-5 p-3">
+        <div class="col-lg-3 col-md-3 pr-5 p-3">
             <img src="/storage/{{$user->profile->image}}" alt="" class="rounded-circle w-100">
         </div>
         <div class="col-lg-9">
             <div class="d-flex justify-content-between align-items-baseline">
                 <div class="d-flex">
                     <div class="h1">{{ $user->username}}</div>
-                    <follow-button user-id = "{{$user->id}}"></follow-button>
+                    <follow-button user-id = "{{ $user->id }}"></follow-button>
 
                 </div>
                 
